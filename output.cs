@@ -1,83 +1,52 @@
 using System.Data;
 
 
-Random random=new Random();
 
-bool playAgain=true;
-string player;
-string computer;
+Console.Write("What is your first number: ");
+double num1=Convert.ToDouble(Console.ReadLine());
 
-while(playAgain){
+Console.Write("What is your second number: ");
+double num2=Convert.ToDouble(Console.ReadLine());
 
-  player="";
-  computer="";
-  while(player!="rock" && player!="paper" && player!="scissors"){
-   Console.Write("Enter Rock, Paper or Scissors : ");
-   player=Console.ReadLine();
-   player=player.ToLower();
-  }
+Console.Write("Which operators : ");
+string operators= Console.ReadLine();
 
-  
-  switch(random.Next(1,4)){
-    
-    case 1:
-     computer="rock";
-     break;
 
-    case 2:
-     computer="paper";
-     break;
+double result;
 
-    case 3:
-     computer="scissors";
-     break;
+switch(operators){
 
-  }
+  case "+":
+   result= num1 + num2;
+   Console.WriteLine("the result is "+ result);
+   break;
 
-  Console.WriteLine("Player: "+ player);
-  Console.WriteLine("Computer: "+ computer);
+  case "-":
+   result = num1 - num2;
+   Console.WriteLine("the result is "+ result);
+   break;
 
-  switch(player){
+  case "x":
+   result= num1 * num2;
+   Console.WriteLine("the result is "+ result);
+   break;
 
-    case "rock":
-     if(computer=="rock"){
-      Console.WriteLine("It is a draw");
-     }
-     else if(computer=="paper"){
-      Console.WriteLine("You loose");
-     }
-     else{
-      Console.WriteLine("You win");
-     }
-     break;
+  case "/":
+   result = num1 / num2;
+   Console.WriteLine("the result is "+ result);
+   break;
 
-     case "paper":
-     if(computer=="rock"){
-      Console.WriteLine("You win");
-     }
-     else if(computer=="paper"){
-      Console.WriteLine("It is a draw");
-     }
-     else{
-      Console.WriteLine("You loose");
-     }
-     break;
-
-     case "scissors":
-     if(computer=="rock"){
-      Console.WriteLine("You loose");
-     }
-     else if(computer=="paper"){
-      Console.WriteLine("You win");
-     }
-     else{
-      Console.WriteLine("It is a draw");
-     }
-     break;
-
-  }
-   
+  case "%":
+   result=num1 % num2;
+   Console.WriteLine("the result is "+ result);
+   break;
 }
+
+
+
+
+
+
 
 
 
