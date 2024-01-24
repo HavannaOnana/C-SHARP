@@ -1,32 +1,44 @@
+using System.ComponentModel.Design;
 using System.Data;
 
 
-static double multiply(double x, double y){
-     double z=x*y;
-     return z;
+// method for checking out
+
+static double CheckOut( params double[] prices){
+   double total= 0;
+   
+   foreach(double price in prices){
+      total=total+ price;
+   }
+
+   return total;
 }
 
 static void Main(){
-   double x;
-   double y;
-   double result;
+   double total=CheckOut(3.99,2.42,12.3);
 
-   Console.WriteLine("Enter in the number 1: ");
-   x=Convert.ToDouble(Console.ReadLine());
-
-   Console.WriteLine("Enter in the number 2: ");
-   y=Convert.ToDouble(Console.ReadLine());
-
-   result=multiply(x,y);
-
-   Console.WriteLine(result);
-
-
+   Console.WriteLine(total);
 
 }
 
-
 Main();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
