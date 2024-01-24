@@ -1,56 +1,32 @@
 using System.Data;
 
 
+static double multiply(double x, double y){
+     double z=x*y;
+     return z;
+}
 
-Console.Write("What is your first number: ");
-double num1=Convert.ToDouble(Console.ReadLine());
+static void Main(){
+   double x;
+   double y;
+   double result;
 
-Console.Write("What is your second number: ");
-double num2=Convert.ToDouble(Console.ReadLine());
+   Console.WriteLine("Enter in the number 1: ");
+   x=Convert.ToDouble(Console.ReadLine());
 
-Console.Write("Which operators : ");
-string operators= Console.ReadLine();
+   Console.WriteLine("Enter in the number 2: ");
+   y=Convert.ToDouble(Console.ReadLine());
+
+   result=multiply(x,y);
+
+   Console.WriteLine(result);
 
 
-double result;
 
-switch(operators){
-
-  case "+":
-   result= num1 + num2;
-   Console.WriteLine("the result is "+ result);
-   break;
-
-  case "-":
-   result = num1 - num2;
-   Console.WriteLine("the result is "+ result);
-   break;
-
-  case "x":
-   result= num1 * num2;
-   Console.WriteLine("the result is "+ result);
-   break;
-
-  case "/":
-   result = num1 / num2;
-   Console.WriteLine("the result is "+ result);
-   break;
-
-  case "%":
-   result=num1 % num2;
-   Console.WriteLine("the result is "+ result);
-   break;
 }
 
 
-
-
-
-
-
-
-
-
+Main();
 
 
 
