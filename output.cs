@@ -2,45 +2,37 @@ using System.ComponentModel.Design;
 using System.Data;
 
 
-class Human{
- 
-  public string name;
-  public int age;
-
-  public void Eat(){
-   Console.Write($"{name} is eating");
-  }
-
-  public void sleep(){
-   Console.Write($"{name} is sleeping");
-  }
-
-}
-
 
 class Program{
 
    static void Main(){
-
-      Human human1=new Human();
-      human1.name="Albert";
-      human1.age=33;
-
-      human1.Eat();
-      human1.sleep();
-
-
-      Human human2=new Human();
-      human2.name="Alex";
+     
+     Car car=new Car();
+     Boat boat=new Boat();
+     
    }
-
-
 }
 
 
+class Vehicle{
+
+   public int speed=0;
+
+   public void go(){
+      Console.WriteLine("This vehicle is moving");
+   }
+}
 
 
+class Car: Vehicle{
+   public int wheels=4;
+   int maxspeed=500;
+};
 
+class Boat:Vehicle{
+   public int wheels=0;
+   int maxspeed=1000;
+}
 
 
 
