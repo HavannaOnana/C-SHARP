@@ -7,14 +7,18 @@ class Program{
 
    static void Main(){
 
-      Mercedes mercedes=new Mercedes();
-      Ferrari ferrari=new Ferrari();
+    
+    Mercedes mercedes=new Mercedes();
+    Ferrari ferrari=new Ferrari();
+    Lambo lambo=new Lambo();
 
+    Car[] vehicles={mercedes,ferrari,lambo};
 
-      mercedes.drive();
-      ferrari.drive();
-         
-      
+    foreach(Car car in vehicles){
+      car.Go();
+    }
+    
+ 
 
    }
 
@@ -25,31 +29,30 @@ class Program{
 
 
 class Car{
- 
- public virtual void drive(){
-   Console.WriteLine("The car drives");
- }
+  public virtual void Go(){
+    Console.WriteLine("Move");
+  }
 
 }
 
-class Mercedes:Car{
-    public override void drive()
-    {
-        Console.WriteLine("This Mercedes is lite ");
-    }
 
+class Mercedes: Car{
+  public override void Go(){
+   Console.WriteLine("The Mercedes is moving");
+  }
 }
 
 class Ferrari: Car{
-    public override void drive()
-    {
-        Console.WriteLine("This Ferrari is fire");
-    }
+
+ public override void Go(){
+   Console.WriteLine("The Ferrari is moving");
+  }
+
 }
 
+class Lambo:Car{
 
-
-
+}
 
 
 
