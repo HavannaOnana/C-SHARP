@@ -7,17 +7,15 @@ class Program{
 
    static void Main(){
 
-      Car car1 =new Car("Mustang","red");
+      Mercedes mercedes=new Mercedes();
+      Ferrari ferrari=new Ferrari();
 
-      Car car2=Copy(car1);
 
-      Console.WriteLine($"{car2.color} {car2.model}");
+      mercedes.drive();
+      ferrari.drive();
+         
+      
 
-     
-   }
-
-   public static Car Copy(Car car){
-      return new Car(car.model,car.color);
    }
 
      
@@ -27,14 +25,26 @@ class Program{
 
 
 class Car{
+ 
+ public virtual void drive(){
+   Console.WriteLine("The car drives");
+ }
 
-   public String model;
-   public String color;
+}
 
-   public Car(string model,string color){
-      this.model=model;
-      this.color=color;
-   }
+class Mercedes:Car{
+    public override void drive()
+    {
+        Console.WriteLine("This Mercedes is lite ");
+    }
+
+}
+
+class Ferrari: Car{
+    public override void drive()
+    {
+        Console.WriteLine("This Ferrari is fire");
+    }
 }
 
 
