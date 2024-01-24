@@ -1,68 +1,32 @@
 using System.ComponentModel.Design;
 using System.Data;
+using System;
+
 
 
 
 class Program{
-
-   static void Main(){
-
-    
-    Mercedes mercedes=new Mercedes();
-    Ferrari ferrari=new Ferrari();
-    Lambo lambo=new Lambo();
-
-    Car[] vehicles={mercedes,ferrari,lambo};
-
-    foreach(Car car in vehicles){
-      car.Go();
-    }
-    
- 
-
-   }
-
-     
    
-}
+  static void Main(){
+  
+  int[] intarray={1,2,3};
+  string[] namearray={"Aba","Luke","Preach"};
+  double[] doublearray={0.1,2.4,3.3};
 
+  display(intarray);
 
+   
 
-class Car{
-  public virtual void Go(){
-    Console.WriteLine("Move");
   }
 
-}
-
-
-class Mercedes: Car{
-  public override void Go(){
-   Console.WriteLine("The Mercedes is moving");
-  }
-}
-
-class Ferrari: Car{
-
- public override void Go(){
-   Console.WriteLine("The Ferrari is moving");
+  public static void display<thing>(thing[] array){
+   foreach(thing item in array){
+      Console.WriteLine(item);
+   }
   }
 
-}
-
-class Lambo:Car{
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
